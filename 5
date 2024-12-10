@@ -1,0 +1,23 @@
+#include <stdio.h>
+#define SIZE 6
+
+int pow(int);
+int main(void) {
+  int decimal=0, i=SIZE-1, j;
+  int num[SIZE]={1, 0, 0, 1, 0, 0};
+  
+  for(j=0; j<SIZE; j++) {
+    decimal+= num[j] * pow(i);
+    printf("%d", num[j]);
+    i--;
+  }
+  printf("의 10진수 : %d", decimal);
+
+}
+
+int pow(int j) {
+  int n=1;
+  for(int i=1; i<=j; i++)
+    n*=2;
+  return n;
+}
